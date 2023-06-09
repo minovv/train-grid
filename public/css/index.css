@@ -13,8 +13,15 @@
 
 .task4 {
   display: grid;
-  grid-template-areas: 'item1, item5, item6, item4, item2, item3';
+  grid-template-areas:
+    'item1'
+    'item5'
+    'item6'
+    'item4'
+    'item2'
+    'item3';
 }
+
 .task4 .item2 {
 }
 .task4 .item4 {
@@ -203,6 +210,7 @@
 .task38 {
   display: grid;
 }
+
 .task38 .item5 {
   justify-self: first baseline;
   align-self: first center;
@@ -226,15 +234,23 @@
 /* For the .task40 element, place the .item elements in two columns with a content size of no more than 30% and 70%, respectively */
 .task40 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: fit-content(30%) 1fr;
 }
 
 .task41 {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(110px, 30%));
 }
 
 .task42 {
   display: grid;
+  /* grid-auto-flow: row; */
+  grid-template-areas:
+    'item1 item2'
+    'item1 item3'
+    'item4 item5'
+    'item4 item6';
 }
 .task42 .item1 {
 }
@@ -251,6 +267,11 @@
 
 .task43 {
   display: grid;
+  grid-template-areas:
+    'item1 item2'
+    'item3 item3'
+    'item4 item5'
+    'item6 .';
 }
 .task43 .item3 {
 }
@@ -269,22 +290,27 @@
 
 .task46 {
   display: grid;
+  grid-auto-columns: min-content max-content;
 }
 
 .task47 {
   display: grid;
+  grid-template-rows: min-content;
 }
 
 .task48 {
   display: grid;
+  grid-auto-flow: row;
 }
 
 .task50 {
   display: grid;
+  grid-auto-flow: dense;
 }
 
 .task49 {
   display: grid;
+  grid-auto-flow: column;
 }
 
 .task51 {
